@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <div class="parentContainer">
+            <section class="header">
+                <img class="logoImg" src="/Images/lightning.png" alt="Electric Bill Calculator">
+                <h1 class="logoText">Electric Bill Calculator</h1>
+            </section>
+            
+            <section class="formAndResult">
+                <section class="form">
+                    <form class="userInput">
+                        <div>
+                            <label for="rate">Electricity Rate</label>
+                            <input type="text" id="rate" value="10" required>
+                        </div>
+                        <div>
+                            <label for="applianceName">Appliance</label>
+                            <input type="text" id="applianceName" required>
+                        </div>
+                        <div>
+                            <label for="watt">Rated Wattage</label>
+                            <input type="text" id="watt" required>
+                        </div>
+                        <div>
+                            <label for="usage">Usage Duration</label>
+                            <input type="text" id="usage" required>
+                        </div>
+                        <div>
+                            <button id="calculate">Calculate</button>
+                        </div>
+                    </form>
+                </section>
+    
+                <section class="result">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Appliance</th>
+                                <th>Hourly</th>
+                                <th>Daily</th>
+                                <th>Monthly</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataResult">
+                            <tr>
+                                       
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </div>
+    
+    </body>
+    <script type="module" src="/script.js"></script>
+</html>
