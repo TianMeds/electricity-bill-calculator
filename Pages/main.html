@@ -20,7 +20,7 @@
                     <form class="userInput">
                         <div>
                             <label for="rate">Electricity Rate</label>
-                            <input type="text" id="rate" value="10" required>
+                            <input type="number" id="rate" value="10.0" step="any" max="50" required>
                         </div>
                         <div>
                             <label for="applianceName">Appliance</label>
@@ -28,11 +28,11 @@
                         </div>
                         <div>
                             <label for="watt">Rated Wattage</label>
-                            <input type="text" id="watt" required>
+                            <input type="number" id="watt" step="any" min="1" required>
                         </div>
                         <div>
                             <label for="usage">Usage Duration</label>
-                            <input type="text" id="usage" required>
+                            <input type="number" id="usage" step="any" min="0.1" max="24" required>
                         </div>
                         <div>
                             <button id="calculate">Calculate</button>

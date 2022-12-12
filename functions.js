@@ -19,25 +19,14 @@ export const monthlyCost = (watt, usage, rate) => {
     return (((watt * usage * 30)) / 1000) * rate;
 }
 
-// export const populateTable = (items) => {
-//     const table = document.getElementById("dataResult");
+export const valueAssignment = () => {
+    let rate = document.getElementById('rate').value;
+    let name = document.getElementById('applianceName').value;
+    let watt = document.getElementById('watt').value;
+    let usage = document.getElementById('usage').value;
 
-//     items.forEach ( items => {
-//         let row = table.insertRow(-1);
-        
-//         let name = row.insertCell(0);
-//         name.innerHTML = items.name;
-
-//         let hourly = row.insertCell(1);
-//         hourly.innerHTML = items.hourly;
-
-//         let daily = row.insertCell(2);
-//         daily.innerHTML = items.daily;
-
-//         let monthly = row.insertCell(3);
-//         monthly.innerHTML = items.monthly;
-//     });
-// }
+    return rate, name, watt, usage;
+}
 
 export const populateTable = (items) => {
     const table = document.getElementById("dataResult");
@@ -46,10 +35,6 @@ export const populateTable = (items) => {
         let row = table.insertRow(-1);
         
 
-        // for(let i = 0; i < items.length; i++) {
-        //     let data = row.insertCell(i);
-        //     data.innerHTML = items.data;
-        // }
        
         let name = row.insertCell(0);
         name.innerHTML = items.name;
