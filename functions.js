@@ -8,6 +8,21 @@ function appliance(name, rate, watt, usage, {computedCost}) {
 }
 
 
+export const computedResult = () => {
+    //Variable Assignment from form inputs
+    let rate = document.getElementById('rate').value,
+        name = document.getElementById('applianceName').value,
+        watt = document.getElementById('watt').value,
+        usage = document.getElementById('usage').value;
+
+    //Calculation of electricity cost
+    const hourly = hourlyCost(watt, rate);
+    const daily = dailyCost(watt, usage, rate);
+    const monthly = monthlyCost(watt, usage, rate);
+
+    return {name, hourly, daily, monthly};
+}
+
 //Math formulae
 export const hourlyCost = (watt, rate) => {
     return (watt / 1000) * rate;
@@ -19,14 +34,6 @@ export const monthlyCost = (watt, usage, rate) => {
     return (((watt * usage * 30)) / 1000) * rate;
 }
 
-export const valueAssignment = () => {
-    let rate = document.getElementById('rate').value;
-    let name = document.getElementById('applianceName').value;
-    let watt = document.getElementById('watt').value;
-    let usage = document.getElementById('usage').value;
-
-    return rate, name, watt, usage;
-}
 
 export const populateTable = (items) => {
     const table = document.getElementById("dataResult");

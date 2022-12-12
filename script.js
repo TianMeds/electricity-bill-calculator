@@ -1,12 +1,28 @@
-import {hourlyCost, dailyCost, monthlyCost, insertAfter, populateTable, valueAssignment} from './functions.js';
+import {insertAfter, populateTable, computedResult} from './functions.js';
 
 const calc = document.querySelector(".userInput"); //storing form data into a const
-
+const resultArray = [];
 
 const calculate = (ev)=> { //Function expression && arrow function
     ev.preventDefault(); //Stop the form from submitting & stop refreshing page
 
-    valueAssignment();
+    //Calls the function and stores returned object value into a variable
+    const result = computedResult();
+    //Appends object to array
+    resultArray.push(result);
+    console.log(resultArray);
+
+
+
+
+
+
+
+
+
+
+
+
     // console.log('Electricity rate: ' + rate + '\nName: ' + name + '\nWattage: ' + watt + '\nUsage: ' + usage);
 
     // const hourly = hourlyCost(watt, rate);
