@@ -35,27 +35,33 @@ export const monthlyCost = (watt, usage, rate) => {
 }
 
 
-export const populateTable = (items) => {
-    const table = document.getElementById("dataResult");
 
-    items.forEach ( items => {
-        let row = table.insertRow(-1);
-        
+export const populateTable = (result) => {
+    const table = document.querySelector('#dataResult');
+    let row = document.createElement('tr');
 
-       
-        let name = row.insertCell(0);
-        name.innerHTML = items.name;
-
-        let hourly = row.insertCell(1);
-        hourly.innerHTML = items.hourly;
-
-        let daily = row.insertCell(2);
-        daily.innerHTML = items.daily;
-
-        let monthly = row.insertCell(3);
-        monthly.innerHTML = items.monthly;
-    });
+    Object.values(result).forEach(data => {
+        let cell = document.createElement('td');
+        let textNode = document.createTextNode(data);
+        cell.appendChild(textNode);
+        row.appendChild(cell);
+    })
+    document.querySelector('#dataResult').appendChild(row);
 }
+
+// export const populateTable = (resultsArray) => {
+//     const table = document.querySelector('#dataResult');
+//     let row = document.createElement('tr');
+//     resultsArray.forEach(object => {
+//         Object.values(object).forEach(data => {
+//             let cell = document.createElement('td');
+//             let textNode = document.createTextNode(data);
+//             cell.appendChild(textNode);
+//             row.appendChild(cell);
+//         })
+//     })
+//     document.querySelector('#dataResult').appendChild(row);
+// }
 
 //-------------------------------------------------------------------------------------//
 

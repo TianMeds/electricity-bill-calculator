@@ -66,31 +66,31 @@ height: auto;
     padding-bottom: 1rem;
 }
 /*------ Form Section ------*/
-.userInput {
+#userInput {
     display: flex;
     flex-direction: column;
     row-gap: 0.8rem;
     flex-wrap: wrap;
 }
-.userInput div {
+#userInput div {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
-.userInput div label {
+#userInput div label {
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.userInput input {
+#userInput input {
     flex-grow: 2;
     /* -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;	
     width: 60%; */
 }
-.userInput div:last-child {
+#userInput div:last-child {
     margin-left: auto;
     margin-bottom: 2rem;
 }
