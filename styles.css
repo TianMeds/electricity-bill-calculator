@@ -1,4 +1,3 @@
-
 /* CSS RESET */
 html {
     box-sizing: border-box;
@@ -24,10 +23,21 @@ max-width: 100%;
 height: auto;
 }
 
+
+/* Centers Whole Content into Screen */
+html {
+  display: flex;
+  flex-flow: row nowrap;  
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
 /*------ CSS Proper ------*/
 .parentContainer {
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 600px;
     background-color: antiquewhite;
 
     display: flex;
@@ -60,11 +70,6 @@ height: auto;
 
 
 
-.formAndResult {
-    min-width: 60%;
-    max-width: 70%;
-    padding-bottom: 1rem;
-}
 /*------ Form Section ------*/
 #userInput {
     display: flex;
@@ -80,20 +85,17 @@ height: auto;
 }
 #userInput div label {
     font-size: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
 #userInput input {
     flex-grow: 2;
-    /* -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;	
-    width: 60%; */
 }
 #userInput div:last-child {
     margin-left: auto;
     margin-bottom: 2rem;
 }
+
 /* Button */
 #calculate {
     margin: 0.5rem 0 0 0;
@@ -138,63 +140,58 @@ height: auto;
   transform: translateY(0);
 } 
 
-
 /*------ Result Section ------*/
-.displayResult {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: space-between;
+.result {
+  margin-bottom: 2rem;
 }
-
-.displayResult p {
-    font-size: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
-
-/*---------------------------------------------------*/
 table {
     display: grid;
     border-collapse: collapse;
     min-width: 100%;
-    grid-template-columns: auto auto auto auto; /* Specifies how many column and their sizes */
-  }
+    grid-template-columns: repeat(5, auto); /* Specifies how many column and their sizes */
+}
   
-  thead,
-  tbody,
-  tr {
-    display: contents;
-  }
-  
-  th,
-  td {
-    padding: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  th {
-    position: sticky;
-    top: 0;
-    background: #ffa408;
-    text-align: left;
-    font-weight: normal;
-    font-size: 1.1rem;
-    color: white;
-  }
-  
-  th:last-child {
-    border: 0;
-  }
-  
-  td {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #808080;
-  }
-  
-  tr:nth-child(even) td {
-    background: #f8f6ff;
-  }
+thead,
+tbody,
+tr {
+  display: contents;
+}
+
+th,
+td {
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #ffa408;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: white;
+}
+
+th:last-child {
+  border: 0;
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #808080;
+}
+
+tr:nth-child(odd) td {
+  background: #f8f6ff;
+}
+
+
+.table-data, 
+.table-header {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1rem;
+}
