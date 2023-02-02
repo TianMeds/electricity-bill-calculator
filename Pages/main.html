@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Electricity Calculator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/styles.css">
@@ -17,10 +17,10 @@
             
             <section class="formAndResult">
                 <section class="form">
-                    <form class="userInput">
+                    <form id="userInput">
                         <div>
                             <label for="rate">Electricity Rate</label>
-                            <input type="text" id="rate" value="10" required>
+                            <input type="number" id="rate" value="10.0" step="any" max="50" required>
                         </div>
                         <div>
                             <label for="applianceName">Appliance</label>
@@ -28,11 +28,11 @@
                         </div>
                         <div>
                             <label for="watt">Rated Wattage</label>
-                            <input type="text" id="watt" required>
+                            <input type="number" id="watt" step="any" min="1" required>
                         </div>
                         <div>
                             <label for="usage">Usage Duration</label>
-                            <input type="text" id="usage" required>
+                            <input type="number" id="usage" step="any" min="0.1" max="24" required>
                         </div>
                         <div>
                             <button id="calculate">Calculate</button>
@@ -40,26 +40,10 @@
                     </form>
                 </section>
     
-                <section class="result">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Appliance</th>
-                                <th>Hourly</th>
-                                <th>Daily</th>
-                                <th>Monthly</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dataResult">
-                            <tr>
-                                       
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+                <section id="result" class="result"></section>
             </section>
         </div>
-    
+        <script type="module" src="/script.js"></script>
     </body>
-    <script type="module" src="/script.js"></script>
+    
 </html>
