@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Electricity Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="parentContainer">
+            <section class="header">
+                <img class="logoImg" src="./Images/lightning.png" alt="Electric Bill Calculator">
+                <h1 class="logoText">Electric Bill Calculator</h1>
+            </section>
+            
+            <section class="formAndResult">
+                <section class="form">
+                    <form id="userInput">
+                        <div>
+                            <label for="rate">Electricity Rate</label>
+                            <input type="number" id="rate" value="10.0" step="any" max="50" required>
+                        </div>
+                        <div>
+                            <label for="applianceName">Appliance</label>
+                            <input type="text" id="applianceName" required>
+                        </div>
+                        <div>
+                            <label for="watt">Rated Wattage</label>
+                            <input type="number" id="watt" step="any" min="1" required>
+                        </div>
+                        <div>
+                            <label for="usage">Usage Duration</label>
+                            <input type="number" id="usage" step="any" min="0.1" max="24" required>
+                        </div>
+                        <div>
+                            <button id="calculate">Calculate</button>
+                        </div>
+                    </form>
+                </section>
+    
+                <section id="result" class="result"></section>
+            </section>
+        </div>
+        <script type="module" src="./script.js"></script>
+    </body>
+    
+</html>
